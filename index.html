@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>深藍史詩：海洋的遺落記憶 | 藝術導覽</title>
     
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#00050a">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/bhes109341-ui/website/main/1.jpg">
+
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&family=Noto+Serif+TC:wght@600;900&display=swap" rel="stylesheet">
     
     <style>
@@ -31,8 +38,6 @@
         }
 
         /* --- 視覺特效：電影膠卷質感 --- */
-        
-        /* 全螢幕雜訊噪點 */
         .film-grain {
             position: fixed;
             top: 0; left: 0;
@@ -43,7 +48,6 @@
             z-index: 9999;
         }
 
-        /* 電影寬螢幕黑邊 (Letterbox) */
         .letterbox {
             position: fixed;
             left: 0; width: 100%;
@@ -55,7 +59,6 @@
         .top-bar { top: 0; }
         .bottom-bar { bottom: 0; }
 
-        /* --- 標題與排版 --- */
         h1, h2, h3 {
             font-family: 'Noto Serif TC', serif;
             letter-spacing: 0.15em;
@@ -71,7 +74,6 @@
             padding: 12vh 10%;
         }
 
-        /* 第一幕：首頁全幅背景 */
         .hero {
             height: 100vh;
             background: linear-gradient(var(--overlay-black), var(--overlay-black)), 
@@ -96,7 +98,6 @@
             opacity: 0.8;
         }
 
-        /* 敘事章節排版 (Split Layout) */
         .content-section {
             display: flex;
             gap: 60px;
@@ -132,7 +133,6 @@
             text-align: justify;
         }
 
-        /* 實體畫框樣式 (Polaroid Style) */
         .image-box {
             flex: 1;
             display: flex;
@@ -153,11 +153,9 @@
             filter: sepia(20%) contrast(1.1);
         }
 
-        /* 左右交錯微調旋轉 */
         .content-section:nth-child(odd) .frame { transform: rotate(2deg); }
         .content-section:nth-child(even) .frame { transform: rotate(-2deg); }
 
-        /* --- 互動按鈕 --- */
         .btn-group {
             margin-top: 2rem;
             display: flex;
@@ -181,7 +179,6 @@
             box-shadow: 0 0 20px rgba(197, 163, 88, 0.4);
         }
 
-        /* --- 滾動揭示效果 --- */
         .reveal {
             opacity: 0;
             transform: translateY(60px);
@@ -195,16 +192,11 @@
 
         .delay-1 { transition-delay: 0.3s; }
 
-        /* --- 頁尾 --- */
         footer {
             padding: 120px 0 80px 0;
             text-align: center;
             background: linear-gradient(to bottom, transparent, #000);
             border-top: 1px solid rgba(197, 163, 88, 0.1);
-        }
-
-        footer .social-links {
-            margin-bottom: 30px;
         }
 
         footer p {
@@ -214,7 +206,6 @@
             color: var(--accent-gold);
         }
 
-        /* --- 響應式 (RWD) --- */
         @media (max-width: 992px) {
             .content-section, .content-section:nth-child(even) {
                 flex-direction: column;
@@ -248,15 +239,11 @@
     <section class="content-section">
         <div class="text-box reveal">
             <h2>遺落的湛藍聖殿</h2>
-            <p>
-                大海佔據了地球百分之七十的面積，但在波濤之下，隱藏著一個我們鮮少觸及的異世界。
-                這裡的生命不依賴光合作用，而是靠著深海熱泉與古老的演化機制存續。
-                每一種生物都是一部活生生的歷史，記錄著地球數億年來的變遷與韌性。
-            </p>
+            <p>大海佔據了地球百分之七十的面積，但在波濤之下，隱藏著一個我們鮮少觸及的異世界。</p>
         </div>
         <div class="image-box reveal delay-1">
             <div class="frame">
-                <img src="https://raw.githubusercontent.com/bhes109341-ui/website/main/2.png" alt="Deep Sea Scene">
+                <img src="https://raw.githubusercontent.com/bhes109341-ui/website/main/2.png" alt="Deep Sea">
             </div>
         </div>
     </section>
@@ -264,97 +251,37 @@
     <section class="content-section">
         <div class="text-box reveal">
             <h2>深海巨獸的迴聲</h2>
-            <p>
-                在深藍的遠方，傳來了座頭鯨與抹香鯨的長鳴。
-                牠們是海洋中的游牧民族，穿越數千海里的遷徙路徑，只為繁衍下一代。
-                這些龐大的身軀在水中顯得如此優雅，彷彿在太空中緩慢滑行的星艦，守護著這片古老的領地。
-            </p>
+            <p>在深藍的遠方，傳來了座頭鯨與抹香鯨的長鳴。牠們是海洋中的游牧民族，穿越數千海里的遷徙路徑。</p>
         </div>
         <div class="image-box reveal delay-1">
             <div class="frame">
-                <img src="https://raw.githubusercontent.com/bhes109341-ui/website/main/3.png" alt="Whale Narrative">
-            </div>
-        </div>
-    </section>
-
-    <section class="content-section">
-        <div class="text-box reveal">
-            <h2>繁星點點的生命</h2>
-            <p>
-                不僅是大魚，微小的水母與浮游生物同樣在海洋中扮演關鍵角色。
-                牠們利用生物螢光進行溝通，將黑暗的深海點綴成一場華麗的燈光秀。
-                這些看似脆弱的生命，卻是支撐起整個全球食物鏈的最重要基石。
-            </p>
-        </div>
-        <div class="image-box reveal delay-1">
-            <div class="frame">
-                <img src="https://raw.githubusercontent.com/bhes109341-ui/website/main/4.png" alt="Micro Marine Life">
-            </div>
-        </div>
-    </section>
-
-    <section class="content-section">
-        <div class="text-box reveal">
-            <h2>最後的深藍防線</h2>
-            <p>
-                隨著環境變遷，這片聖殿正面臨前所未有的挑戰。
-                保護海洋生物不再只是科學家的責任，而是我們每一個人的使命。
-                透過了解，我們開始學會熱愛；透過熱愛，我們才會起身守護。
-                讓我們一起探索更多關於海洋的奧秘，並給予這片土地最深的敬意。
-            </p>
-            <div class="btn-group">
-                <a href="https://www.facebook.com/HSWEC/" target="_blank" class="cta-button">HSWEC 社群探索</a>
-                <a href="http://aquarium.com.tw" target="_blank" class="cta-button">官方網站導覽</a>
-            </div>
-        </div>
-        <div class="image-box reveal delay-1">
-            <div class="frame">
-                <img src="https://raw.githubusercontent.com/bhes109341-ui/website/main/5.png" alt="Conservation">
+                <img src="https://raw.githubusercontent.com/bhes109341-ui/website/main/3.png" alt="Whale">
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="social-links reveal">
-            <p style="font-size: 0.8rem; opacity: 0.6; margin-bottom: 10px;">EXTENDED LINKS</p>
-            <a href="https://www.facebook.com/HSWEC/" target="_blank" style="color: var(--text-silver); margin: 0 15px; text-decoration: none;">Facebook</a>
-            <a href="http://aquarium.com.tw" target="_blank" style="color: var(--text-silver); margin: 0 15px; text-decoration: none;">Aquarium Official</a>
-        </div>
         <p class="reveal">洪顥尹 | 海洋生物介紹</p>
-        <p style="font-size: 0.6rem; opacity: 0.4; margin-top: 15px; letter-spacing: 0.1em;">© 2026 DEEP BLUE CINEMA. ALL RIGHTS RESERVED.</p>
+        <p style="font-size: 0.6rem; opacity: 0.4; margin-top: 15px;">© 2026 DEEP BLUE CINEMA.</p>
     </footer>
 
     <script>
-        // 1. Intersection Observer 滾動揭示效果
+        // 1. Intersection Observer
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('active');
             });
         }, { threshold: 0.15 });
-
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-        // 2. 視差滾動效果 (Parallax Background & Frames)
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            
-            // 首頁背景視差
-            const hero = document.querySelector('.hero');
-            hero.style.backgroundPositionY = -(scrolled * 0.3) + 'px';
-
-            // 畫框在滾動時的微妙垂直位移 (僅限電腦版)
-            if (window.innerWidth > 992) {
-                const frames = document.querySelectorAll('.frame');
-                frames.forEach((frame, i) => {
-                    const offset = (scrolled * 0.05) * (i % 2 === 0 ? 1 : -1);
-                    frame.style.transform = `translateY(${offset}px) rotate(${i % 2 === 0 ? 2 : -2}deg)`;
-                });
-            }
-        });
-
-        console.log("網頁導演語錄：每一場深海之旅，都是一場尋找自我的過程。");
+        // 2. 註冊 Service Worker (PWA 關鍵)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(reg => console.log('SW registered!', reg))
+                    .catch(err => console.log('SW failed!', err));
+            });
+        }
     </script>
 </body>
 </html>
