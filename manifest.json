@@ -1,0 +1,16 @@
+{
+  "name": "深藍史詩：海洋的遺落記憶",
+  "short_name": "深藍史詩",
+  "description": "一場與海洋生物的無聲對話藝術導覽",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#00050a",
+  "theme_color": "#c5a358",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/bhes109341-ui/website/main/1.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
